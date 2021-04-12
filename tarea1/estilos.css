@@ -1,0 +1,36 @@
+body{
+    padding:0;
+    margin:0;
+}
+.imagenIzquierda{
+    padding: 0;
+    margin: 0;
+    background-image:url("fondo.jpg");
+    width: 25%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    float: left;
+}
+.imagenDerecha{
+    padding: 0;
+    margin: 0;
+    background-image:url("fondo.jpg");
+    width: 25%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    float: right;
+}
+.row{
+    position: relative;
+}
+
+form{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    height: 15%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+}
