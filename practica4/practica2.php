@@ -1,6 +1,9 @@
 <?php
 $str="Hola alumnos del tecnm";
-$patron="/hola/i";
-$cant=preg_match_all($patron,$str);
-echo "La expresion: ".$patron." Fue encontrada: ".$cant." Veces"." En la cadena ".$str;
+$patron="hola";
+if(preg_match("/".$patron."/i",$str)){
+    echo "La expresion: ".preg_replace("/".$patron."/i","Hello",$str)." Fue encontrada: "." En la cadena ".$str;
+}else{
+    echo "No encontrado";
+}
 ?>
