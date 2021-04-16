@@ -16,11 +16,21 @@
 <?php
 if(isset($_POST['datos'])){
     $mensaje=$_POST["datos"];
-$patron1="/\b[L0-9]{9,9}+@[A-Za-z0-9.-]+\.tecnm.mx\b/";
+    $patron1="/\b[L0-9]{9,9}+@[A-Za-z0-9.-]+\.tecnm.mx\b/";
+    $encontrado = preg_match_all($patron1, $mensaje, $coincidencias, PREG_OFFSET_CAPTURE);
 if(preg_match($patron1,$mensaje)){
-    echo "Tu correo electronico es correcto";
+    foreach ($coincidencias[0] as $coincide) {
+		echo "<p>Tu correo electronico es correcto: '$coincide[0]'</p><br/>";
+        break;
+	}
+    echo "";
 }else{
-    echo "TU correo electronico es incorrrecto";
+    $patron="/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b/";
+    $encontrado = preg_match_all($patron, $mensaje, $coincidencias, PREG_OFFSET_CAPTURE);
+    foreach ($coincidencias[0] as $coincide) {
+		echo "<p>Tu correo electronico es incorrecto: '$coincide[0]'</p><br/>";
+        break;
+	}
 }
 }
 ?>
