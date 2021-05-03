@@ -1,0 +1,55 @@
+div{
+	border:2px solid black;
+	border-radius: 10px;
+	position: absolute;
+	left: 25%;
+	top: 25%;
+	width: 50%;
+}
+
+form{
+	padding: 10px;
+	margin: 5px;
+	align-items: center;
+}
+
+.elementosForm{
+	margin: 8px;
+	height: 25px;
+	border-radius: 5px;
+	border: 1px solid black;
+	display: block;
+	width: 95%
+}
+
+.elementosForm::placeholder{
+	text-align: center;
+}
+
+.elementosForm:focus{
+	border: 2px solid #1B4F72;
+	outline: none;	
+}
+
+h4{
+	text-align: center;
+	font-family: 'Calibri';
+	font-size: 20px;
+}
+
+#enviar{
+	text-align: center;
+	width:25%;
+	height: 25px;
+	margin: 8px;
+	border-radius: 5px;
+	background: white;
+	border: 1px solid black;
+}
+
+#enviar:hover{
+	cursor: pointer;
+	background: black;
+	color: white;
+	border: 0;
+}
